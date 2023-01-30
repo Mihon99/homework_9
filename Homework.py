@@ -73,6 +73,14 @@ def play(message):
     else:
         winner = name2 if flag == name1 else name1
         bot.send_message(message.chat.id,f"Поздравляем победил игрок {winner}")
+    restart(message)
+
+def restart(message):
+    global a, sweets, max_sweet, flag
+    a = 0
+    sweets = 2021
+    max_sweet = 28
+    flag = name1
 
 
 
